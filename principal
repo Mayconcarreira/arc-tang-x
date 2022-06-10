@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+
+    /*artcan(X) = x + (-x^3/3)+(x^5/5) ...*/
+    int num, expo = 1, resul= 0;
+    float valor_x, resposta, pot = 1.0;
+
+    do{
+        
+         printf("digite o valor de x: \n");
+         scanf("%f", &valor_x);
+         if (valor_x < 0 ){
+             valor_x *= -1;
+         }
+    }while(valor_x >= 1);
+
+    do{
+        printf("Digite o valor do termo: \n");
+        scanf("%d", &num);    
+    }while(num < 0);
+
+     /*artcan(X) = x^1/1 + (-x^3/3)+(x^5/5) ...*/
+    for(int i = 0; i <= num; i++){
+        while(resul < expo){
+            pot *= valor_x;
+        printf("RESULT %d\n", resul);
+            resul++;
+        
+        printf("EXPO %d\n", expo);    
+        }
+        printf("RESULT %d", resul);
+        resposta = pot / expo; 
+            expo += 2;
+        if(num % 2 == 0){
+            pot *= -1;
+        }
+        
+        resul = 0;
+    }
+    printf("o resultado e:  %.6f  ", resposta);
+
+    }
+
