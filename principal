@@ -25,12 +25,9 @@ int main() {
     for(int i = 0; i <= num; i++){
         while(resul < expo){
             pot *= valor_x;
-        printf("RESULT %d\n", resul);
             resul++;
-        
-        printf("EXPO %d\n", expo);    
+           
         }
-        printf("RESULT %d", resul);
         resposta = pot / expo; 
             expo += 2;
         if(num % 2 == 0){
